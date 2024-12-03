@@ -1,14 +1,14 @@
 
 provider "aws" {
-region = "ap-south-1"
+region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0e53db6fd757e38c7"
+  ami             = "ami-0453ec754f44f9a4a"
   instance_type   = "t2.micro"
-  key_name        = "MUMBAI-TERRA"
+  key_name        = "MIC"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -23,11 +23,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0e53db6fd757e38c7"
+  ami             = "ami-0453ec754f44f9a4a"
   instance_type   = "t2.micro"
-  key_name        = "MUMBAI-TERRA"
+  key_name        = "MIC"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -42,22 +42,22 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0e53db6fd757e38c7"
+  ami             = "ami-0453ec754f44f9a4a"
   instance_type   = "t2.micro"
-  key_name        = "MUMBAI-TERRA"
+  key_name        = "MIC"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0e53db6fd757e38c7"
+  ami             = "ami-0453ec754f44f9a4a"
   instance_type   = "t2.micro"
-  key_name        = "MUMBAI-TERRA"
+  key_name        = "MIC"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "app-server-2"
   }
@@ -95,11 +95,11 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["user1", "user2", "user3", "user4"]
+default = ["milky", "tillu", "hari", "sweety"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-south-1a"
+ availability_zone = "us-east-1a"
   size = 40
   tags = {
     Name = "ebs-001"
