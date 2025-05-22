@@ -4,9 +4,9 @@ region = "ap-south-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0c50b6f7dc3701ddd"
+  ami             = "ami-0af9569868786b23a"
   instance_type   = "t2.micro"
-  key_name        = "MYTERRAFORM-DEV"
+  key_name        = "DEV-TERRA"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -23,9 +23,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0c50b6f7dc3701ddd"
+  ami             = "ami-0af9569868786b23a"
   instance_type   = "t2.micro"
-  key_name        = "MYTERRAFORM-DEV"
+  key_name        = "DEV-TERRA"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
@@ -42,9 +42,9 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0c50b6f7dc3701ddd"
+  ami             = "ami-0af9569868786b23a"
   instance_type   = "t2.micro"
-  key_name        = "MYTERRAFORM-DEV"
+  key_name        = "DEV-TERRA"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -53,9 +53,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0c50b6f7dc3701ddd"
+  ami             = "ami-0af9569868786b23a"
   instance_type   = "t2.micro"
-  key_name        = "MYTERRAFORM-DEV"
+  key_name        = "DEV-TERRA"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   tags = {
