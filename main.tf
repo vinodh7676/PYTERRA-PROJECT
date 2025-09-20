@@ -4,9 +4,9 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-00ca32bbc84273381"
-  instance_type   = "t3.micro"
-  key_name        = "TERRRA"
+  ami             = "ami-08982f1c5bf93d976"
+  instance_type   = "t2.micro"
+  key_name        = "vinodh-pem"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   user_data       = <<EOF
@@ -23,9 +23,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-00ca32bbc84273381"
-  instance_type   = "t3.micro"
-  key_name        = "TERRRA"
+  ami             = "ami-08982f1c5bf93d976"
+  instance_type   = "t2.micro"
+  key_name        = "vinodh-pem"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   user_data       = <<EOF
@@ -42,9 +42,9 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-00ca32bbc84273381"
-  instance_type   = "t3.micro"
-  key_name        = "TERRRA"
+  ami             = "ami-08982f1c5bf93d976"
+  instance_type   = "t2.micro"
+  key_name        = "vinodh-pem"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   tags = {
@@ -53,9 +53,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-00ca32bbc84273381"
-  instance_type   = "t3.micro"
-  key_name        = "TERRRA"
+  ami             = "ami-08982f1c5bf93d976"
+  instance_type   = "t2.micro"
+  key_name        = "vinodh-pem"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   tags = {
